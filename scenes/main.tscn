@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct7go0kdn6lpl"]
+
+[ext_resource type="Texture2D" uid="uid://cy7qm04pv3vmr" path="res://sprite/Floor tiles-2.png.png" id="1_e380n"]
+[ext_resource type="PackedScene" uid="uid://bwko7y2icywp7" path="res://scenes/player.tscn" id="2_yaotf"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_2os53"]
+[ext_resource type="PackedScene" uid="uid://cqob1jtlana7s" path="res://scenes/gate_1.tscn" id="4_nctki"]
+
+[node name="Main" type="Node2D"]
+
+[node name="FloorTiles-2_png" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_e380n")
+
+[node name="Player" parent="." instance=ExtResource("2_yaotf")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(0.1, 0.1)
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("3_2os53")
+
+[node name="Gate1" parent="." instance=ExtResource("4_nctki")]
+position = Vector2(76, 327)
