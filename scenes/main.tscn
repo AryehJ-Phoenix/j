@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=3 uid="uid://ct7go0kdn6lpl"]
 
 [ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="1_fbbhy"]
+[ext_resource type="Script" path="res://scripts/score_label.gd" id="2_8c6hx"]
 [ext_resource type="PackedScene" uid="uid://bwko7y2icywp7" path="res://scenes/player.tscn" id="2_yaotf"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_2os53"]
-[ext_resource type="PackedScene" uid="uid://cqob1jtlana7s" path="res://scenes/gate_1.tscn" id="4_nctki"]
 [ext_resource type="PackedScene" uid="uid://d3e31pd0rmcvt" path="res://scenes/spawner.tscn" id="4_srdun"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rorwn"]
@@ -149,5 +149,10 @@ position = Vector2(1200, -4000)
 [node name="spawner2" parent="." instance=ExtResource("4_srdun")]
 position = Vector2(-1200, -4000)
 
-[node name="Gate1" parent="." instance=ExtResource("4_nctki")]
-position = Vector2(1200, -1064)
+[node name="Label" type="Label" parent="."]
+offset_left = -234.0
+offset_top = -282.0
+offset_right = 1.46977e+06
+offset_bottom = 679741.0
+theme_override_font_sizes/font_size = 100
+script = ExtResource("2_8c6hx")

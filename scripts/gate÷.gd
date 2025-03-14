@@ -6,7 +6,7 @@ var rng = RandomNumberGenerator.new()
 var number
 
 func _ready() -> void:
-	number = rng.randi_range(1.0,20.0)
+	number = rng.randi_range(1.0,5.0)
 	print(number)
 
 
@@ -18,3 +18,9 @@ func _process(delta: float) -> void:
 		sprite.play(str(number))
 	
 	position.y += 12.5
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and number != 1:
+		GameManager.divide_score(number)

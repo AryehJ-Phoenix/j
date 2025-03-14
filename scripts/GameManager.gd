@@ -1,11 +1,43 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
+var score_text = Label
+var score = 0
+var hit_timer = 2
+var timer
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	timer = hit_timer
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	timer -= delta
+	if score < 0:
+		score = 0
+
+func setScoreLabel(label):
+	score_text = label
+
+func add_score(amount):
+	if timer < 0:
+		score += amount
+		score_text.text = "Score = " + str(score)
+		timer = hit_timer
+
+func multiply_score(amount):
+	if timer < 0:
+		score *= amount
+		score_text.text = "Score = " + str(score)
+		timer = hit_timer
+
+func minus_score(amount):
+	if timer < 0:
+		score -= amount
+		score_text.text = "Score = " + str(score)
+		timer = hit_timer
+
+func divide_score(amount):
+	if timer < 0:
+		score /= amount
+		score_text.text = "Score = " + str(score)
+		timer = hit_timer

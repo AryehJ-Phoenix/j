@@ -26,3 +26,7 @@ folder_colors={
 "res://scripts/": "teal",
 "res://sprite/": "pink"
 }
+
+[global_group]
+
+player=""
