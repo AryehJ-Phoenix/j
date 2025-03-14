@@ -18,3 +18,11 @@ config/icon="res://sprite/icon.svg"
 [autoload]
 
 GameManager="*res://scripts/GameManager.gd"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/": "red",
+"res://scripts/": "teal",
+"res://sprite/": "pink"
+}
