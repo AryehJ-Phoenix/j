@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://e3jur7735awi"]
+
+[ext_resource type="Texture2D" uid="uid://bbjj8qbcmg8gv" path="res://sprite/unnamed-11.png" id="1_lh7w0"]
+
+[node name="credit card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_lh7w0")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+zoom = Vector2(10, 10)

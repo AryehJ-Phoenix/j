@@ -1,73 +1,74 @@
-[gd_scene load_steps=23 format=3 uid="uid://ct7go0kdn6lpl"]
+[gd_scene load_steps=26 format=3 uid="uid://ct7go0kdn6lpl"]
 
-[ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="1_fbbhy"]
-[ext_resource type="Script" path="res://scripts/score_label.gd" id="2_8c6hx"]
-[ext_resource type="PackedScene" uid="uid://bwko7y2icywp7" path="res://scenes/player.tscn" id="2_yaotf"]
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_2os53"]
-[ext_resource type="PackedScene" uid="uid://d3e31pd0rmcvt" path="res://scenes/spawner.tscn" id="4_srdun"]
+[ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="1_52uqr"]
+[ext_resource type="PackedScene" uid="uid://bwko7y2icywp7" path="res://scenes/player.tscn" id="2_iwrj1"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_nkx17"]
+[ext_resource type="PackedScene" uid="uid://d3e31pd0rmcvt" path="res://scenes/spawner.tscn" id="4_62coo"]
+[ext_resource type="Script" path="res://scripts/score_label.gd" id="5_p4vxk"]
+[ext_resource type="PackedScene" uid="uid://d5fralkmkunq" path="res://scenes/ad_summon.tscn" id="6_5cicw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rorwn"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(0, 0, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts2vx"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(160, 0, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcxdu"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(320, 0, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l13na"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(480, 0, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gsn4"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(640, 0, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2ncj"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(0, 236, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_blb1o"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(160, 236, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tfu0t"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(320, 236, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16g0q"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(480, 236, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhfkc"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(640, 236, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbtma"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(0, 472, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_407io"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(160, 472, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcaye"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(320, 472, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcoks"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(480, 472, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vsmhh"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(640, 472, 160, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2n7un"]
-atlas = ExtResource("1_fbbhy")
+atlas = ExtResource("1_52uqr")
 region = Rect2(0, 708, 160, 236)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v0teh"]
@@ -123,10 +124,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 25.0
+"speed": 60.0
 }]
 
-[node name="Main" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pscf7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6hof"]
+
+[node name="Noob" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -138,15 +143,15 @@ autoplay = "default"
 scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(0.35, 0.35)
 
-[node name="Player" parent="." instance=ExtResource("2_yaotf")]
+[node name="Player" parent="." instance=ExtResource("2_iwrj1")]
 
 [node name="GameManager" type="Node2D" parent="."]
-script = ExtResource("3_2os53")
+script = ExtResource("3_nkx17")
 
-[node name="spawner" parent="." instance=ExtResource("4_srdun")]
+[node name="spawner" parent="." instance=ExtResource("4_62coo")]
 position = Vector2(1200, -4000)
 
-[node name="spawner2" parent="." instance=ExtResource("4_srdun")]
+[node name="spawner2" parent="." instance=ExtResource("4_62coo")]
 position = Vector2(-1200, -4000)
 
 [node name="Label" type="Label" parent="."]
@@ -155,4 +160,31 @@ offset_top = -282.0
 offset_right = 1.46977e+06
 offset_bottom = 679741.0
 theme_override_font_sizes/font_size = 100
-script = ExtResource("2_8c6hx")
+script = ExtResource("5_p4vxk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2500, 0)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_pscf7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2500, 0)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_e6hof")
+
+[node name="ad summon" parent="." instance=ExtResource("6_5cicw")]
+position = Vector2(961, -489)
+
+[node name="ad summon2" parent="." instance=ExtResource("6_5cicw")]
+position = Vector2(-1473, 653)
+
+[node name="ad summon3" parent="." instance=ExtResource("6_5cicw")]
+position = Vector2(-683, -532)
+
+[node name="ad summon4" parent="." instance=ExtResource("6_5cicw")]
+position = Vector2(547, -2445)
+
+[node name="ad summon5" parent="." instance=ExtResource("6_5cicw")]
+position = Vector2(655, 321)

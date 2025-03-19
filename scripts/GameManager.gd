@@ -5,7 +5,10 @@ var score_text = Label
 var score = 0
 var hit_timer = 2
 var timer
-
+var skill = null
+var noob_speed = 30
+var pro_speed = 45
+var card = null
 
 func _ready() -> void:
 	timer = hit_timer
@@ -13,7 +16,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer -= delta
 	if score < 0:
-		score = 0
+		get_tree().change_scene_to_file("res://scenes/debt.tscn")
+	
+	if card != null:
+		card -= delta
+		
+		if card < 0:
+			card = null
+			get_tree().change_scene_to_file("res://scenes/debt.tscn")
 
 func setScoreLabel(label):
 	score_text = label

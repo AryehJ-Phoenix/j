@@ -10,6 +10,7 @@ var gate4 = preload("res://scenes/gate÷.tscn")
 var rng = RandomNumberGenerator.new()
 var number
 var gate_scene
+var summons = 0
 
 func _ready() -> void:
 	timer = time
@@ -24,16 +25,29 @@ func _process(delta: float) -> void:
 
 
 func spawn():
+	summons += 1
+	
 	number = rng.randi_range(1.0,4.0)
 	
-	if number == 1:
+	if summons == 1:
 		gate_scene = gate1
-	if number == 2:
-		gate_scene = gate2
-	if number == 3:
-		gate_scene = gate3
-	if number == 4:
-		gate_scene = gate4
+	
+	if summons == 2:
+		if number == 1 or 2:
+			gate_scene = gate1
+		if number == 3 or 4:
+			gate_scene = gate2
+	
+	if summons >= 3:
+		if number == 1:
+			gate_scene = gate1
+		if number == 2:
+			gate_scene = gate2
+		if number == 3:
+			gate_scene = gate3
+		if number == 4:
+			gate_scene = gate4
+	
 	
 	var gate = gate_scene.instantiate()
 	gate.position = position

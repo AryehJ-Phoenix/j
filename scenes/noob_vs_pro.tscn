@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg7isu25bmtmh"]
+
+[ext_resource type="Script" path="res://scripts/noob_vs_pro.gd" id="1_l7mgf"]
+[ext_resource type="Texture2D" uid="uid://wp5ncebssa0r" path="res://sprite/noob.png" id="2_2tmis"]
+[ext_resource type="Texture2D" uid="uid://dh0y8q2q1kirc" path="res://sprite/pro.png" id="3_cvjp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w7ko"]
+bg_color = Color(0.364143, 0.330656, 0.411017, 1)
+
+[node name="noob vs pro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l7mgf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -441.0
+offset_top = -204.0
+offset_right = 480.0
+offset_bottom = 209.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w7ko")
+
+[node name="Noob" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 48.0
+offset_bottom = 11.0
+icon = ExtResource("2_2tmis")
+icon_alignment = 1
+
+[node name="Pro" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -48.0
+offset_top = -13.0
+offset_right = -8.0
+offset_bottom = 11.0
+icon = ExtResource("3_cvjp3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(7, 7)
+
+[connection signal="pressed" from="Noob" to="." method="_on_noob_pressed"]
+[connection signal="pressed" from="Pro" to="." method="_on_pro_pressed"]

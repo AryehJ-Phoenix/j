@@ -6,18 +6,22 @@ var rng = RandomNumberGenerator.new()
 var number
 
 func _ready() -> void:
-	number = rng.randi_range(1.0,5.0)
+	number = rng.randi_range(1.0,6.0)
 	print(number)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if number == 6:
+		number = 0.5
 	
-	
-	if number !=null:
+	if number !=null or 6:
 		sprite.play(str(number))
 	
-	position.y += 12.5
+	if GameManager.skill == "noob":
+		position.y += GameManager.noob_speed
+	if GameManager.skill == "pro":
+		position.y += GameManager.pro_speed
 
 
 

@@ -1,9 +1,15 @@
 extends CharacterBody2D
 
 
-var speed = 1000
+var speed = 1
 var velovity
 var xdirection
+
+func _ready() -> void:
+	if GameManager.skill == "noob":
+		speed = 1500
+	if GameManager.skill == "pro":
+		speed = 2000
 
 func _physics_process(delta: float) -> void:
 	

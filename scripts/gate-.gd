@@ -17,7 +17,10 @@ func _process(delta: float) -> void:
 	if number !=null:
 		sprite.play(str(number))
 	
-	position.y += 12.5
+	if GameManager.skill == "noob":
+		position.y += GameManager.noob_speed
+	if GameManager.skill == "pro":
+		position.y += GameManager.pro_speed
 
 
 
