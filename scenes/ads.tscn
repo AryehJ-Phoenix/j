@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6uaac5lboj7h"]
+[gd_scene load_steps=23 format=3 uid="uid://c6uaac5lboj7h"]
 
 [ext_resource type="Script" path="res://scripts/ads.gd" id="1_5rphy"]
 [ext_resource type="Texture2D" uid="uid://w4i7ussseuwa" path="res://sprite/LilahAd.png" id="2_nnb6w"]
 [ext_resource type="Texture2D" uid="uid://ktiv7xk86bwg" path="res://sprite/denali.png" id="3_86ewe"]
+[ext_resource type="Texture2D" uid="uid://bch0efi5tqx7g" path="res://sprite/New Piskel-1.png-4.png" id="3_mmkq1"]
 [ext_resource type="Texture2D" uid="uid://r255dbk72fd" path="res://sprite/New Piskel-24.png" id="4_4hflt"]
 [ext_resource type="Texture2D" uid="uid://doju4ftr8mgbg" path="res://sprite/New Piskel-22.png" id="5_wuw2v"]
 
@@ -12,6 +13,11 @@ region = Rect2(0, 0, 1535, 1536)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hxjq7"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"blank",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ulgsl")
@@ -19,12 +25,11 @@ animations = [{
 "loop": true,
 "name": &"lilah",
 "speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo3ol"]
+atlas = ExtResource("3_mmkq1")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygbme"]
 atlas = ExtResource("3_86ewe")
@@ -34,15 +39,18 @@ region = Rect2(0, 0, 1086, 1084)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qo3ol")
+}],
+"loop": true,
+"name": &"blank",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ygbme")
 }],
 "loop": true,
 "name": &"denali",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -88,6 +96,11 @@ region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbhnl"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"blank",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7o44t")
@@ -135,11 +148,6 @@ animations = [{
 "name": &"dust",
 "speed": 4.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ga2i6")
@@ -162,20 +170,21 @@ offset_bottom = 16.0
 [node name="lilah" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.02, 0.02)
 sprite_frames = SubResource("SpriteFrames_hxjq7")
-animation = &"lilah"
-autoplay = "new_animation"
+animation = &"blank"
+autoplay = "blank"
 
 [node name="denali" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(0.03, 0.03)
 sprite_frames = SubResource("SpriteFrames_234if")
-animation = &"denali"
-autoplay = "new_animation"
+animation = &"blank"
+autoplay = "blank"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="normal" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_dbhnl")
-animation = &"buy"
-autoplay = "new_animation"
+animation = &"blank"
+autoplay = "blank"
 
 [node name="Button" type="Button" parent="."]
 offset_left = 7.0

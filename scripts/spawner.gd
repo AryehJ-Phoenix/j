@@ -53,3 +53,5 @@ func spawn():
 	gate.position = position
 	get_parent().add_child(gate)
 	timer = time
+	
+	GameManager.redo == true
