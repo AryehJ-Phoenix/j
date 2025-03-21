@@ -10,7 +10,6 @@ var noob_speed = 30
 var pro_speed = 45
 var card = null
 var redo = false
-var redo_timer
 
 func _ready() -> void:
 	timer = hit_timer
@@ -18,10 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if redo == true:
 		print("uh oh")
-		redo_timer = 0.1
-		redo_timer -= delta
-		if redo_timer < 0:
-			redo = false
+		redo = false
 	
 	timer -= delta
 	if score < 0:

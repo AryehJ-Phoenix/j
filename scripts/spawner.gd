@@ -25,6 +25,8 @@ func _process(delta: float) -> void:
 
 
 func spawn():
+	GameManager.redo = true
+	
 	summons += 1
 	
 	number = rng.randi_range(1.0,4.0)
@@ -53,5 +55,3 @@ func spawn():
 	gate.position = position
 	get_parent().add_child(gate)
 	timer = time
-	
-	GameManager.redo == true

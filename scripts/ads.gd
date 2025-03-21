@@ -83,4 +83,5 @@ func redo():
 	ad.position.x = position.x
 	ad.position.y = position.y
 	get_parent().add_child(ad)
+	ad.number = number
 	queue_free()
