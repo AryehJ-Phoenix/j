@@ -10,11 +10,27 @@ var noob_speed = 30
 var pro_speed = 45
 var card = null
 var redo = false
+var cancel = 3
+var money = 0
+var money_text = Label
 
 func _ready() -> void:
 	timer = hit_timer
 
 func _process(delta: float) -> void:
+	if get_tree().current_scene == null:
+		return
+	
+	if get_tree().current_scene.name == "res://scenes/debt.tscn":
+		skill = "debt"
+	if get_tree().current_scene.name == "res://scenes/pro.tscn":
+		skill = "pro"
+	if get_tree().current_scene.name == "res://scenes/noob.tscn":
+		skill = "noob"
+	if get_tree().current_scene.name == "res://scenes/credit_card.tscn":
+		skill = "card"
+	
+	
 	if redo == true:
 		print("uh oh")
 		redo = false
@@ -32,6 +48,9 @@ func _process(delta: float) -> void:
 
 func setScoreLabel(label):
 	score_text = label
+
+func setMoneyLabel(label):
+	money_text = label
 
 func add_score(amount):
 	if timer < 0:
@@ -53,6 +72,6 @@ func minus_score(amount):
 
 func divide_score(amount):
 	if timer < 0:
-		score /= amount
+		score = round(score/amount)
 		score_text.text = "Score = " + str(score)
 		timer = hit_timer

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg7isu25bmtmh"]
+[gd_scene load_steps=8 format=3 uid="uid://bg7isu25bmtmh"]
 
 [ext_resource type="Script" path="res://scripts/noob_vs_pro.gd" id="1_l7mgf"]
 [ext_resource type="Texture2D" uid="uid://wp5ncebssa0r" path="res://sprite/noob.png" id="2_2tmis"]
 [ext_resource type="Texture2D" uid="uid://dh0y8q2q1kirc" path="res://sprite/pro.png" id="3_cvjp3"]
 [ext_resource type="Texture2D" uid="uid://d0w8t1muo8dgq" path="res://sprite/2025_03_20_0u4_Kleki.png" id="4_psoq6"]
+[ext_resource type="Texture2D" uid="uid://8pdo1rp15ypc" path="res://sprite/New Piskel-1.png-4-3.png" id="5_ud7ka"]
+[ext_resource type="Script" path="res://scripts/money_label.gd" id="6_kfp38"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w7ko"]
 bg_color = Color(0.364143, 0.330656, 0.411017, 1)
@@ -41,11 +43,30 @@ offset_bottom = 29.0
 icon = ExtResource("3_cvjp3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(30, 30)
+zoom = Vector2(5, 5)
 
 [node name="202503200u4Kleki" type="Sprite2D" parent="."]
 scale = Vector2(0.104651, 0.104651)
 texture = ExtResource("4_psoq6")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -31.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 59.0
+icon = ExtResource("5_ud7ka")
+icon_alignment = 1
+
+[node name="Money_Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -53.0
+offset_right = 22.0
+offset_bottom = -30.0
+theme_override_font_sizes/font_size = 10
+script = ExtResource("6_kfp38")
 
 [connection signal="pressed" from="Noob" to="." method="_on_noob_pressed"]
 [connection signal="pressed" from="Pro" to="." method="_on_pro_pressed"]

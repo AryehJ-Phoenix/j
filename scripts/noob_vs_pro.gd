@@ -1,6 +1,10 @@
 extends Control
 
 
+func _ready() -> void:
+	GameManager.money += GameManager.score
+	GameManager.score = 0
+
 
 func _on_noob_pressed() -> void:
 	GameManager.skill = "noob"

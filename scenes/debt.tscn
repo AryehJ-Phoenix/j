@@ -1,12 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://j5m1gjbjkjgl"]
+[gd_scene load_steps=6 format=3 uid="uid://j5m1gjbjkjgl"]
 
+[ext_resource type="Script" path="res://scripts/debt.gd" id="1_2xok8"]
 [ext_resource type="Texture2D" uid="uid://4wfsfjwf283x" path="res://sprite/New Piskel-2.png-3.png" id="1_hlf64"]
+[ext_resource type="PackedScene" uid="uid://6feomgnhh70s" path="res://scenes/reset.tscn" id="2_1p53p"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_2nb6b"]
+[ext_resource type="Texture2D" uid="uid://cbrjbfbo1mo6a" path="res://sprite/New Piskel-1.png-5.png" id="5_bs2qq"]
 
-[node name="Debt" type="Node2D"]
+[node name="Debt" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2xok8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_hlf64")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D"]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.35, 0.35)
+
+[node name="reset" parent="." instance=ExtResource("2_1p53p")]
+position = Vector2(0, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("3_2nb6b")
+
+[node name="button" type="Button" parent="."]
+texture_filter = 1
+offset_left = -531.0
+offset_top = 383.0
+offset_right = 533.0
+offset_bottom = 903.0
+icon = ExtResource("5_bs2qq")
+icon_alignment = 1
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
