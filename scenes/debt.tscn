@@ -27,6 +27,7 @@ script = ExtResource("3_2nb6b")
 
 [node name="button" type="Button" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = -531.0
 offset_top = 383.0
 offset_right = 533.0

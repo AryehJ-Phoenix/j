@@ -13,6 +13,8 @@ var redo = false
 var cancel = 3
 var money = 0
 var money_text = Label
+var ads = true
+var high_score = 0
 
 func _ready() -> void:
 	timer = hit_timer
@@ -30,6 +32,8 @@ func _process(delta: float) -> void:
 	if get_tree().current_scene.name == "res://scenes/credit_card.tscn":
 		skill = "card"
 	
+	if high_score < score:
+		high_score = score
 	
 	if redo == true:
 		print("uh oh")
@@ -45,12 +49,16 @@ func _process(delta: float) -> void:
 		if card < 0:
 			card = null
 			get_tree().change_scene_to_file("res://scenes/debt.tscn")
+	
 
 func setScoreLabel(label):
 	score_text = label
 
 func setMoneyLabel(label):
 	money_text = label
+
+func update_money():
+	money_text.text = "Money = $" + str(money)
 
 func add_score(amount):
 	if timer < 0:

@@ -35,7 +35,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_2hg7w")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Jasper",
 "speed": 5.0
 }]
 
@@ -49,7 +49,8 @@ script = ExtResource("1_v7odp")
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_a3b87")
-autoplay = "default"
+animation = &"Jasper"
+autoplay = "Jasper"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(6, 6)

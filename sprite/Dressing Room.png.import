@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjxyb5cji2hay"
-path="res://.godot/imported/$10000.png-d0dfa55cfec5419e79499014f39245ed.ctex"
+uid="uid://djmjvtc7cvc2d"
+path="res://.godot/imported/Dressing Room.png-086abec9384a5e5b61f480f61ac33f50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/$10000.png"
-dest_files=["res://.godot/imported/$10000.png-d0dfa55cfec5419e79499014f39245ed.ctex"]
+source_file="res://sprite/Dressing Room.png"
+dest_files=["res://.godot/imported/Dressing Room.png-086abec9384a5e5b61f480f61ac33f50.ctex"]
 
 [params]
 

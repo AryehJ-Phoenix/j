@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2pgexwlwsa43"
-path="res://.godot/imported/$1000.png-a1eed1558fac1e08dde753ef881a3fc7.ctex"
+uid="uid://b0xfkn42onm6j"
+path="res://.godot/imported/Jas Walk Cycle-2-2.png-c8987f0a775ccb273b5575281a0c68ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/$1000.png"
-dest_files=["res://.godot/imported/$1000.png-a1eed1558fac1e08dde753ef881a3fc7.ctex"]
+source_file="res://sprite/Jas Walk Cycle-2-2.png"
+dest_files=["res://.godot/imported/Jas Walk Cycle-2-2.png-c8987f0a775ccb273b5575281a0c68ac.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ct7go0kdn6lpl"]
+[gd_scene load_steps=28 format=3 uid="uid://ct7go0kdn6lpl"]
 
 [ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="1_52uqr"]
 [ext_resource type="PackedScene" uid="uid://bwko7y2icywp7" path="res://scenes/player.tscn" id="2_iwrj1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/score_label.gd" id="5_p4vxk"]
 [ext_resource type="PackedScene" uid="uid://d5fralkmkunq" path="res://scenes/ad_summon.tscn" id="6_5cicw"]
 [ext_resource type="PackedScene" uid="uid://6feomgnhh70s" path="res://scenes/reset.tscn" id="7_l38mw"]
+[ext_resource type="PackedScene" uid="uid://dtlashqmj3lq6" path="res://scenes/money_icon.tscn" id="8_xk1gl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rorwn"]
 atlas = ExtResource("1_52uqr")
@@ -191,3 +192,6 @@ position = Vector2(547, -2445)
 position = Vector2(655, 321)
 
 [node name="reset" parent="." instance=ExtResource("7_l38mw")]
+
+[node name="Money Icon" parent="." instance=ExtResource("8_xk1gl")]
+position = Vector2(0, 300)

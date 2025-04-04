@@ -1,0 +1,187 @@
+[gd_scene load_steps=19 format=3 uid="uid://dtlashqmj3lq6"]
+
+[ext_resource type="Script" path="res://scripts/money_icon.gd" id="1_ha2r8"]
+[ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="2_n4oxb"]
+[ext_resource type="Texture2D" uid="uid://bthiaxtgci1ku" path="res://sprite/$$$.png" id="2_ucy4j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5l7yc"]
+atlas = ExtResource("2_n4oxb")
+region = Rect2(400, 708, 200, 236)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_do3lo"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(0, 0, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr05w"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(0, 40, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs86n"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(0, 80, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7yb8"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(0, 120, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbfud"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(0, 160, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4au4n"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(75, 0, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vphso"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(75, 40, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3bhp"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(75, 80, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rbci"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(150, 120, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5npjk"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(150, 0, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okvnx"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(150, 40, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v3qp"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(150, 80, 75, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcpkx"]
+atlas = ExtResource("2_ucy4j")
+region = Rect2(150, 120, 75, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gwvcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5l7yc")
+}],
+"loop": true,
+"name": &"$0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_do3lo")
+}],
+"loop": true,
+"name": &"$1-29",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dr05w")
+}],
+"loop": true,
+"name": &"$100-2999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs86n")
+}],
+"loop": true,
+"name": &"$10000-299999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7yb8")
+}],
+"loop": true,
+"name": &"$1000000-29999999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbfud")
+}],
+"loop": true,
+"name": &"$100000000+",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4au4n")
+}],
+"loop": true,
+"name": &"$30-59",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vphso")
+}],
+"loop": true,
+"name": &"$3000-5999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3bhp")
+}],
+"loop": true,
+"name": &"$300000-599999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rbci")
+}],
+"loop": true,
+"name": &"$30000000-59999999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5npjk")
+}],
+"loop": true,
+"name": &"$60-99",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okvnx")
+}],
+"loop": true,
+"name": &"$6000-9999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v3qp")
+}],
+"loop": true,
+"name": &"$600000-999999",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcpkx")
+}],
+"loop": true,
+"name": &"$60000000-99999999",
+"speed": 5.0
+}]
+
+[node name="Money Icon" type="Node2D"]
+script = ExtResource("1_ha2r8")
+
+[node name="$$$" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 350)
+scale = Vector2(8.5, 8.5)
+sprite_frames = SubResource("SpriteFrames_gwvcy")
+animation = &"$0"
+autoplay = "$0"

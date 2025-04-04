@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyjw63khi7t04"]
+
+[ext_resource type="Script" path="res://scripts/dressing_room.gd" id="1_1tbep"]
+[ext_resource type="Texture2D" uid="uid://dmwoy3vte4sxc" path="res://sprite/New Piskel-27.png" id="2_032vc"]
+[ext_resource type="Texture2D" uid="uid://b0xfkn42onm6j" path="res://sprite/Jas Walk Cycle-2-2.png" id="3_8dimy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjrl"]
+atlas = ExtResource("3_8dimy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvs0m"]
+atlas = ExtResource("3_8dimy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fljm"]
+atlas = ExtResource("3_8dimy")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsqst"]
+atlas = ExtResource("3_8dimy")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aba47"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvs0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fljm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsqst")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dressing Room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1tbep")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_032vc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(7, 7)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -17.0
+offset_right = 39.0
+offset_bottom = 17.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+texture_filter = 1
+position = Vector2(17, 17)
+sprite_frames = SubResource("SpriteFrames_aba47")
