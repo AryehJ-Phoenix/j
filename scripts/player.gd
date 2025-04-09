@@ -22,4 +22,7 @@ func _physics_process(delta: float) -> void:
 	xdirection = Input.get_axis("ui_left", "ui_right")
 	
 	rotation = xdirection
+	
+	sprite.play(GameManager.skin)
+	
 	move_and_slide()

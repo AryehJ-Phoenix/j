@@ -15,6 +15,7 @@ var money = 0
 var money_text = Label
 var ads = true
 var high_score = 0
+var skin = "Jasper(purple)"
 
 func _ready() -> void:
 	timer = hit_timer

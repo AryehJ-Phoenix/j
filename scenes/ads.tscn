@@ -1,10 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6uaac5lboj7h"]
+[gd_scene load_steps=25 format=3 uid="uid://c6uaac5lboj7h"]
 
 [ext_resource type="Script" path="res://scripts/ads.gd" id="1_5rphy"]
+[ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="2_jc6ct"]
 [ext_resource type="Texture2D" uid="uid://w4i7ussseuwa" path="res://sprite/LilahAd.png" id="2_nnb6w"]
 [ext_resource type="Texture2D" uid="uid://ktiv7xk86bwg" path="res://sprite/denali.png" id="3_86ewe"]
 [ext_resource type="Texture2D" uid="uid://r255dbk72fd" path="res://sprite/New Piskel-24.png" id="4_4hflt"]
 [ext_resource type="Texture2D" uid="uid://doju4ftr8mgbg" path="res://sprite/New Piskel-22.png" id="5_wuw2v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vb2g"]
+atlas = ExtResource("2_jc6ct")
+region = Rect2(600, 708, 200, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ulgsl"]
 atlas = ExtResource("2_nnb6w")
@@ -12,7 +17,10 @@ region = Rect2(0, 0, 1535, 1536)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hxjq7"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vb2g")
+}],
 "loop": true,
 "name": &"blank",
 "speed": 5.0
@@ -26,13 +34,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab3u6"]
+atlas = ExtResource("2_jc6ct")
+region = Rect2(600, 708, 200, 236)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygbme"]
 atlas = ExtResource("3_86ewe")
 region = Rect2(0, 0, 1086, 1084)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_234if"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab3u6")
+}],
 "loop": true,
 "name": &"blank",
 "speed": 5.0
@@ -45,6 +60,10 @@ animations = [{
 "name": &"denali",
 "speed": 5.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nec10"]
+atlas = ExtResource("2_jc6ct")
+region = Rect2(400, 708, 200, 236)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7o44t"]
 atlas = ExtResource("4_4hflt")
@@ -88,7 +107,10 @@ region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbhnl"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nec10")
+}],
 "loop": true,
 "name": &"blank",
 "speed": 5.0
