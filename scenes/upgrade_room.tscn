@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://capsbgeplsnas"]
+[gd_scene load_steps=30 format=3 uid="uid://capsbgeplsnas"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_room.gd" id="1_ssgnb"]
 [ext_resource type="Texture2D" uid="uid://dmwoy3vte4sxc" path="res://sprite/New Piskel-27.png" id="2_pq5uf"]
@@ -6,6 +6,164 @@
 [ext_resource type="Texture2D" uid="uid://dy5514yxv1w5s" path="res://sprite/New Piskel-30.png" id="4_j0ns4"]
 [ext_resource type="FontFile" uid="uid://r6hbtqvqy2bf" path="res://sprite/Minecraft.ttf" id="5_slta7"]
 [ext_resource type="Script" path="res://scripts/money_label.gd" id="6_h53da"]
+[ext_resource type="Texture2D" uid="uid://xgpxstd7c0q" path="res://sprite/UPGRADES.png" id="7_hx5wb"]
+[ext_resource type="Texture2D" uid="uid://1is8l2dv3lht" path="res://sprite/New Piskel-31.png" id="8_qowck"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mkq0"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8oc7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mkq0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jswgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvquf"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwoyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvquf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmfyx"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_na1d2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmfyx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4xq1"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewumx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4xq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xctwa"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihhwc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xctwa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ks73"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8udam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ks73")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpbub"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8jrr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpbub")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0tev"]
+atlas = ExtResource("7_hx5wb")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7sl8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0tev")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgnk2"]
+atlas = ExtResource("8_qowck")
+region = Rect2(0, 0, 11, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lf3q"]
+atlas = ExtResource("8_qowck")
+region = Rect2(0, 0, 11, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_563te"]
+atlas = ExtResource("8_qowck")
+region = Rect2(11, 0, 11, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdlf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgnk2")
+}],
+"loop": false,
+"name": &"lock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lf3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_563te")
+}],
+"loop": false,
+"name": &"unlock",
+"speed": 2.0
+}]
 
 [node name="Upgrade Room" type="Control"]
 layout_mode = 3
@@ -26,10 +184,11 @@ script = ExtResource("3_e8lpt")
 zoom = Vector2(5, 5)
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = -39.0
-offset_top = 19.0
+offset_top = 22.0
 offset_right = 39.0
-offset_bottom = 61.0
+offset_bottom = 64.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="Back"]
 texture_filter = 1
@@ -37,11 +196,168 @@ position = Vector2(39, 21)
 scale = Vector2(2, 2)
 texture = ExtResource("4_j0ns4")
 
+[node name="Multiply 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = -110.0
+offset_top = -62.0
+offset_right = -74.0
+offset_bottom = -26.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 1"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_8oc7q")
+autoplay = "default"
+
+[node name="Multiply 1,5" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -73.0
+offset_top = -62.0
+offset_right = -37.0
+offset_bottom = -26.0
+icon = SubResource("ViewportTexture_jswgc")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Multiply 1,5"]
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_iwoyq")
+autoplay = "default"
+
+[node name="Multiply 2" type="Button" parent="."]
+offset_left = -36.0
+offset_top = -62.0
+offset_bottom = -26.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 2"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_na1d2")
+autoplay = "default"
+
+[node name="Multiply 2,5" type="Button" parent="."]
+offset_left = 1.0
+offset_top = -62.0
+offset_right = 37.0
+offset_bottom = -26.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 2,5"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_ewumx")
+autoplay = "default"
+
+[node name="Multiply 3" type="Button" parent="."]
+offset_left = 38.0
+offset_top = -62.0
+offset_right = 74.0
+offset_bottom = -26.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 3"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_ihhwc")
+autoplay = "default"
+
+[node name="Good Ads" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -62.5
+offset_right = 111.0
+offset_bottom = -26.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Good Ads"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_8udam")
+autoplay = "default"
+
+[node name="Stop n Think" type="Button" parent="."]
+layout_mode = 0
+offset_left = -110.0
+offset_top = -24.5
+offset_right = -74.0
+offset_bottom = 11.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stop n Think"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_i8jrr")
+autoplay = "default"
+
+[node name="Correct Colors" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -24.5
+offset_right = 111.0
+offset_bottom = 11.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Correct Colors"]
+texture_filter = 1
+position = Vector2(18, 18)
+sprite_frames = SubResource("SpriteFrames_v7sl8")
+
+[node name="Lock 1" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-55, -53)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-18, -53)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(19, -53)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 4" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(56, -54)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 5" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(93, -53.5)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 6" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-92, -15.5)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
+[node name="Lock 7" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(93, -15.5)
+scale = Vector2(2.25, 2.25)
+sprite_frames = SubResource("SpriteFrames_tdlf3")
+animation = &"lock"
+autoplay = "lock"
+
 [node name="Money_Label" type="Label" parent="."]
-offset_left = -20.0
-offset_top = 4.0
-offset_right = 20.0
-offset_bottom = 27.0
+layout_mode = 0
+offset_left = -25.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 24.0
 theme_override_fonts/font = ExtResource("5_slta7")
 theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1

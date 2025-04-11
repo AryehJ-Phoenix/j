@@ -20,6 +20,7 @@ var skin_one_unlock = true
 var skin_two_unlock = false
 var skin_three_unlock = false
 var skin_four_unlock = false
+var correct_colors = false
 
 func _ready() -> void:
 	timer = hit_timer

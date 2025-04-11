@@ -30,12 +30,17 @@ region = Rect2(0, 32, 90, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k287u"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"0(green)",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i8f85")
 }],
 "loop": true,
-"name": &"0",
+"name": &"0(red)",
 "speed": 5.0
 }, {
 "frames": [{
@@ -90,7 +95,7 @@ script = ExtResource("1_l36p6")
 texture_filter = 1
 scale = Vector2(20, 20)
 sprite_frames = SubResource("SpriteFrames_k287u")
-animation = &"0"
+animation = &"0(red)"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(22, 22)

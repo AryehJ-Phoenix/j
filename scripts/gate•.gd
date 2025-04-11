@@ -14,8 +14,12 @@ func _process(delta: float) -> void:
 	if number == 6:
 		number = 2
 	
-	if number !=null:
+	if number !=null and number != 0:
 		sprite.play(str(number))
+	if number == 0 and GameManager.correct_colors == false:
+		sprite.play("0(green)")
+	if number == 0 and GameManager.correct_colors == true:
+		sprite.play("0(red)")
 	
 	if GameManager.skill == "noob":
 		position.y += GameManager.noob_speed

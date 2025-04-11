@@ -303,9 +303,9 @@ autoplay = "default"
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
 offset_left = -39.0
-offset_top = 19.0
+offset_top = 22.0
 offset_right = 39.0
-offset_bottom = 61.0
+offset_bottom = 64.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="Back"]
 texture_filter = 1
