@@ -35,3 +35,8 @@ func _on_ad_free_pressed() -> void:
 func _on_dressing_room_pressed() -> void:
 	GameManager.skill = "dressing room"
 	get_tree().change_scene_to_file("res://scenes/dressing_room.tscn")
+
+
+func _on_upgrade_room_pressed() -> void:
+	GameManager.skill = "upgrade room"
+	get_tree().change_scene_to_file("res://scenes/upgrade_room.tscn")

@@ -9,9 +9,9 @@ extends Control
 @onready var cost_100000: AnimatedSprite2D = $"Cost 100000"
 
 
-var timer_2 = 1000000000000000000
-var timer_3 = 1000000000000000000
-var timer_4 = 1000000000000000000
+var timer_2 = INF
+var timer_3 = INF
+var timer_4 = INF
 
 func _ready() -> void:
 	GameManager.update_money()
@@ -30,10 +30,13 @@ func _process(delta: float) -> void:
 	
 	if timer_2 < 0:
 		lock_2.visible = false
+		cost_1000.visible = false
 	if timer_3 < 0:
 		lock_3.visible = false
+		cost_5000.visible = false
 	if timer_4 < 0:
 		lock_4.visible = false
+		cost_100000.visible = false
 
 
 func _on_jasperpurple_pressed() -> void:
@@ -53,7 +56,6 @@ func _on_jasperred_pressed() -> void:
 			GameManager.skin = "Jasper(red)"
 			lock_2.play("unlock")
 			timer_2 = 1
-			cost_1000.visible = false
 		if GameManager.money < 1000:
 			lock_2.play("lock")
 			print("NOPE RED J IS TOO EXPENSIVE")
@@ -70,7 +72,6 @@ func _on_eyun_pressed() -> void:
 			GameManager.skin = "Eyun"
 			lock_3.play("unlock")
 			timer_3 = 1
-			cost_5000.visible = false
 		if GameManager.money < 5000:
 			lock_3.play("lock")
 			print("NOPE EYUN IS TOO EXPENSIVE")
@@ -88,7 +89,6 @@ func _on_thing_pressed() -> void:
 			GameManager.skin = "Thing"
 			lock_4.play("unlock")
 			timer_4 = 1
-			cost_100000.visible = false
 		if GameManager.money < 100000:
 			lock_4.play("lock")
 			print("NOPE THING IS TOO EXPENSIVE")
