@@ -20,14 +20,6 @@ func _on_pro_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/pro.tscn")
 
 
-func _on_ad_free_pressed() -> void:
-	if GameManager.money >= 6 and GameManager.ads:
-		GameManager.ads = false
-		GameManager.money -= 6
-		GameManager.update_money()
-		print("AD FREE")
-		Ad_Free.visible = false
-	
 	if GameManager.money < 6:
 		print("NUH UH UR POOR")
 

@@ -1,13 +1,19 @@
-[gd_scene load_steps=30 format=3 uid="uid://capsbgeplsnas"]
+[gd_scene load_steps=45 format=3 uid="uid://capsbgeplsnas"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_room.gd" id="1_ssgnb"]
 [ext_resource type="Texture2D" uid="uid://dmwoy3vte4sxc" path="res://sprite/New Piskel-27.png" id="2_pq5uf"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="3_e8lpt"]
 [ext_resource type="Texture2D" uid="uid://dy5514yxv1w5s" path="res://sprite/New Piskel-30.png" id="4_j0ns4"]
 [ext_resource type="FontFile" uid="uid://r6hbtqvqy2bf" path="res://sprite/Minecraft.ttf" id="5_slta7"]
+[ext_resource type="Texture2D" uid="uid://fh0bl2t14aa2" path="res://sprite/UPGRADES-2.png" id="6_ffjur"]
 [ext_resource type="Script" path="res://scripts/money_label.gd" id="6_h53da"]
 [ext_resource type="Texture2D" uid="uid://xgpxstd7c0q" path="res://sprite/UPGRADES.png" id="7_hx5wb"]
+[ext_resource type="Texture2D" uid="uid://dy6m3tgxy7s2l" path="res://sprite/New Piskel-32-3.png" id="8_ppujr"]
 [ext_resource type="Texture2D" uid="uid://1is8l2dv3lht" path="res://sprite/New Piskel-31.png" id="8_qowck"]
+[ext_resource type="Texture2D" uid="uid://be8lyvu3vd0p" path="res://sprite/New Piskel-34.png" id="9_lrfni"]
+[ext_resource type="Texture2D" uid="uid://1wuqqe6u68ct" path="res://sprite/New Piskel-32-3-2.png" id="10_ea7fv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmmhi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4mkq0"]
 atlas = ExtResource("7_hx5wb")
@@ -24,23 +30,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jswgc"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dvquf"]
-atlas = ExtResource("7_hx5wb")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_iwoyq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dvquf")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmfyx"]
 atlas = ExtResource("7_hx5wb")
 region = Rect2(64, 0, 32, 32)
@@ -50,21 +39,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kmfyx")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p4xq1"]
-atlas = ExtResource("7_hx5wb")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ewumx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p4xq1")
 }],
 "loop": true,
 "name": &"default",
@@ -131,6 +105,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fagy2"]
+atlas = ExtResource("6_ffjur")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d72w"]
+atlas = ExtResource("6_ffjur")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g156k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fagy2")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d72w")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dgnk2"]
 atlas = ExtResource("8_qowck")
 region = Rect2(0, 0, 11, 20)
@@ -165,6 +166,105 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke6h5"]
+atlas = ExtResource("9_lrfni")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6730o"]
+atlas = ExtResource("9_lrfni")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7vte"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke6h5")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6730o")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji8vy"]
+atlas = ExtResource("9_lrfni")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0at1g"]
+atlas = ExtResource("9_lrfni")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yg64f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji8vy")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0at1g")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r6jf"]
+atlas = ExtResource("8_ppujr")
+region = Rect2(0, 6, 72, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pckw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r6jf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toell"]
+atlas = ExtResource("8_ppujr")
+region = Rect2(0, 18, 72, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_su6bi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toell")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3m8w"]
+atlas = ExtResource("8_ppujr")
+region = Rect2(0, 24, 72, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fipud"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3m8w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Upgrade Room" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -176,6 +276,16 @@ script = ExtResource("1_ssgnb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_pq5uf")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.745671, 0.262798, 0.389038, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -78.0
+offset_top = -57.0
+offset_right = -72.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dmmhi")
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("3_e8lpt")
@@ -198,71 +308,50 @@ texture = ExtResource("4_j0ns4")
 
 [node name="Multiply 1" type="Button" parent="."]
 layout_mode = 0
-offset_left = -110.0
-offset_top = -62.0
-offset_right = -74.0
-offset_bottom = -26.0
+offset_left = -87.0
+offset_top = 40.0
+offset_right = -63.0
+offset_bottom = 64.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 1"]
 texture_filter = 1
-position = Vector2(18, 18)
+position = Vector2(12, 12)
+scale = Vector2(0.65625, 0.65625)
 sprite_frames = SubResource("SpriteFrames_8oc7q")
 autoplay = "default"
 
-[node name="Multiply 1,5" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = -73.0
-offset_top = -62.0
-offset_right = -37.0
-offset_bottom = -26.0
-icon = SubResource("ViewportTexture_jswgc")
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Multiply 1,5"]
-position = Vector2(18, 18)
-sprite_frames = SubResource("SpriteFrames_iwoyq")
-autoplay = "default"
-
 [node name="Multiply 2" type="Button" parent="."]
-offset_left = -36.0
-offset_top = -62.0
-offset_bottom = -26.0
+layout_mode = 0
+offset_left = -87.0
+offset_top = -12.0
+offset_right = -63.0
+offset_bottom = 12.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 2"]
 texture_filter = 1
-position = Vector2(18, 18)
+position = Vector2(12, 12)
+scale = Vector2(0.625, 0.625)
 sprite_frames = SubResource("SpriteFrames_na1d2")
 autoplay = "default"
 
-[node name="Multiply 2,5" type="Button" parent="."]
-offset_left = 1.0
-offset_top = -62.0
-offset_right = 37.0
-offset_bottom = -26.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 2,5"]
-texture_filter = 1
-position = Vector2(18, 18)
-sprite_frames = SubResource("SpriteFrames_ewumx")
-autoplay = "default"
-
 [node name="Multiply 3" type="Button" parent="."]
-offset_left = 38.0
-offset_top = -62.0
-offset_right = 74.0
-offset_bottom = -26.0
+layout_mode = 0
+offset_left = -87.0
+offset_top = -64.0
+offset_right = -63.0
+offset_bottom = -40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiply 3"]
 texture_filter = 1
-position = Vector2(18, 18)
+position = Vector2(12, 12)
+scale = Vector2(0.625, 0.625)
 sprite_frames = SubResource("SpriteFrames_ihhwc")
 autoplay = "default"
 
 [node name="Good Ads" type="Button" parent="."]
 layout_mode = 0
-offset_left = 75.0
+offset_left = -36.0
 offset_top = -62.5
-offset_right = 111.0
 offset_bottom = -26.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Good Ads"]
@@ -273,10 +362,10 @@ autoplay = "default"
 
 [node name="Stop n Think" type="Button" parent="."]
 layout_mode = 0
-offset_left = -110.0
-offset_top = -24.5
-offset_right = -74.0
-offset_bottom = 11.5
+offset_left = 20.0
+offset_top = -62.5
+offset_right = 56.0
+offset_bottom = -26.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stop n Think"]
 texture_filter = 1
@@ -286,35 +375,49 @@ autoplay = "default"
 
 [node name="Correct Colors" type="Button" parent="."]
 layout_mode = 0
-offset_left = 75.0
-offset_top = -24.5
-offset_right = 111.0
-offset_bottom = 11.5
+offset_left = 76.0
+offset_top = -62.5
+offset_right = 112.0
+offset_bottom = -26.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Correct Colors"]
 texture_filter = 1
 position = Vector2(18, 18)
 sprite_frames = SubResource("SpriteFrames_v7sl8")
 
+[node name="Toggle Ads" type="Button" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = -14.0
+offset_right = 112.0
+offset_bottom = 22.0
+
+[node name="on_off" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(94, 4)
+sprite_frames = SubResource("SpriteFrames_g156k")
+animation = &"off"
+autoplay = "on"
+
 [node name="Lock 1" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-55, -53)
-scale = Vector2(2.25, 2.25)
+position = Vector2(-75, -7)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
 autoplay = "lock"
 
 [node name="Lock 2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-18, -53)
-scale = Vector2(2.25, 2.25)
+position = Vector2(-75, -59)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
 autoplay = "lock"
 
 [node name="Lock 3" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(19, -53)
+position = Vector2(-18, -53.5)
 scale = Vector2(2.25, 2.25)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
@@ -322,7 +425,7 @@ autoplay = "lock"
 
 [node name="Lock 4" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(56, -54)
+position = Vector2(38, -53.5)
 scale = Vector2(2.25, 2.25)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
@@ -330,7 +433,7 @@ autoplay = "lock"
 
 [node name="Lock 5" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(93, -53.5)
+position = Vector2(94, -53.5)
 scale = Vector2(2.25, 2.25)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
@@ -338,19 +441,70 @@ autoplay = "lock"
 
 [node name="Lock 6" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-92, -15.5)
+position = Vector2(94, -5.5)
 scale = Vector2(2.25, 2.25)
 sprite_frames = SubResource("SpriteFrames_tdlf3")
 animation = &"lock"
 autoplay = "lock"
 
-[node name="Lock 7" type="AnimatedSprite2D" parent="."]
+[node name="1-2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(93, -15.5)
-scale = Vector2(2.25, 2.25)
-sprite_frames = SubResource("SpriteFrames_tdlf3")
-animation = &"lock"
-autoplay = "lock"
+position = Vector2(-51, 21.5)
+scale = Vector2(2, 4.6875)
+sprite_frames = SubResource("SpriteFrames_e7vte")
+animation = &"green"
+autoplay = "green"
+
+[node name="2-3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-99, -31)
+scale = Vector2(2, 4.625)
+sprite_frames = SubResource("SpriteFrames_yg64f")
+animation = &"red"
+autoplay = "red"
+
+[node name="50000" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-88, -1)
+rotation = 4.71239
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_pckw1")
+autoplay = "default"
+
+[node name="5000000" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-88, -52)
+rotation = 4.71239
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_su6bi")
+autoplay = "default"
+
+[node name="100000_3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(96, -24)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fipud")
+autoplay = "default"
+
+[node name="100000_2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(39, -24)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fipud")
+autoplay = "default"
+
+[node name="100000_1" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-17, -24)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fipud")
+autoplay = "default"
+
+[node name="6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(94, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ea7fv")
 
 [node name="Money_Label" type="Label" parent="."]
 layout_mode = 0
@@ -364,3 +518,10 @@ horizontal_alignment = 1
 script = ExtResource("6_h53da")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Multiply 1" to="." method="_on_multiply_1_pressed"]
+[connection signal="pressed" from="Multiply 2" to="." method="_on_multiply_2_pressed"]
+[connection signal="pressed" from="Multiply 3" to="." method="_on_multiply_3_pressed"]
+[connection signal="pressed" from="Good Ads" to="." method="_on_good_ads_pressed"]
+[connection signal="pressed" from="Stop n Think" to="." method="_on_stop_n_think_pressed"]
+[connection signal="pressed" from="Correct Colors" to="." method="_on_correct_colors_pressed"]
+[connection signal="pressed" from="Toggle Ads" to="." method="_on_toggle_ads_pressed"]

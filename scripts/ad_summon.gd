@@ -13,7 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	timer -= delta
 	
-	if timer < 0 and GameManager.ads:
+	if timer < 0 and GameManager.ads == true:
 		spawn()
 
 

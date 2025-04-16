@@ -20,7 +20,11 @@ var skin_one_unlock = true
 var skin_two_unlock = false
 var skin_three_unlock = false
 var skin_four_unlock = false
+var multiplier = 1
+var good_ads = false
+var stop_n_think = false
 var correct_colors = false
+var toggle_ads = false
 
 func _ready() -> void:
 	timer = hit_timer
@@ -68,24 +72,28 @@ func update_money():
 
 func add_score(amount):
 	if timer < 0:
+		amount *= multiplier
 		score += amount
 		score_text.text = "Score = " + str(score)
 		timer = hit_timer
 
 func multiply_score(amount):
 	if timer < 0:
+		amount *= multiplier
 		score *= amount
 		score_text.text = "Score = " + str(score)
 		timer = hit_timer
 
 func minus_score(amount):
 	if timer < 0:
+		amount *= multiplier
 		score -= amount
 		score_text.text = "Score = " + str(score)
 		timer = hit_timer
 
 func divide_score(amount):
 	if timer < 0:
+		amount *= multiplier
 		score = round(score/amount)
 		score_text.text = "Score = " + str(score)
 		timer = hit_timer

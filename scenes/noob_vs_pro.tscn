@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg7isu25bmtmh"]
+[gd_scene load_steps=10 format=3 uid="uid://bg7isu25bmtmh"]
 
 [ext_resource type="Script" path="res://scripts/noob_vs_pro.gd" id="1_l7mgf"]
 [ext_resource type="Texture2D" uid="uid://wp5ncebssa0r" path="res://sprite/noob.png" id="2_2tmis"]
 [ext_resource type="Texture2D" uid="uid://dh0y8q2q1kirc" path="res://sprite/pro.png" id="3_cvjp3"]
 [ext_resource type="Texture2D" uid="uid://d0w8t1muo8dgq" path="res://sprite/2025_03_20_0u4_Kleki.png" id="4_psoq6"]
-[ext_resource type="Texture2D" uid="uid://8pdo1rp15ypc" path="res://sprite/New Piskel-1.png-4-3.png" id="5_ud7ka"]
 [ext_resource type="Script" path="res://scripts/money_label.gd" id="6_kfp38"]
 [ext_resource type="FontFile" uid="uid://r6hbtqvqy2bf" path="res://sprite/Minecraft.ttf" id="6_yxn71"]
 [ext_resource type="Texture2D" uid="uid://djmjvtc7cvc2d" path="res://sprite/Dressing Room.png" id="7_44iu7"]
@@ -17,7 +16,7 @@ bg_color = Color(0.364143, 0.330656, 0.411017, 1)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_l7mgf")
-Ad_Free = NodePath("Ad_Free")
+Ad_Free = NodePath("")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -54,16 +53,6 @@ position = Vector2(0, -17)
 scale = Vector2(0.104651, 0.104651)
 texture = ExtResource("4_psoq6")
 
-[node name="Ad_Free" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = -31.0
-offset_top = 18.0
-offset_right = 32.0
-offset_bottom = 42.0
-icon = ExtResource("5_ud7ka")
-icon_alignment = 1
-
 [node name="Money_Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = -26.0
@@ -99,6 +88,5 @@ texture = ExtResource("9_8qjr2")
 
 [connection signal="pressed" from="Noob" to="." method="_on_noob_pressed"]
 [connection signal="pressed" from="Pro" to="." method="_on_pro_pressed"]
-[connection signal="pressed" from="Ad_Free" to="." method="_on_ad_free_pressed"]
 [connection signal="pressed" from="Dressing Room" to="." method="_on_dressing_room_pressed"]
 [connection signal="pressed" from="Upgrade Room" to="." method="_on_upgrade_room_pressed"]
