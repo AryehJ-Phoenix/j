@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://capsbgeplsnas"]
+[gd_scene load_steps=46 format=3 uid="uid://capsbgeplsnas"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_room.gd" id="1_ssgnb"]
 [ext_resource type="Texture2D" uid="uid://dmwoy3vte4sxc" path="res://sprite/New Piskel-27.png" id="2_pq5uf"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://1is8l2dv3lht" path="res://sprite/New Piskel-31.png" id="8_qowck"]
 [ext_resource type="Texture2D" uid="uid://be8lyvu3vd0p" path="res://sprite/New Piskel-34.png" id="9_lrfni"]
 [ext_resource type="Texture2D" uid="uid://1wuqqe6u68ct" path="res://sprite/New Piskel-32-3-2.png" id="10_ea7fv"]
+[ext_resource type="Texture2D" uid="uid://bk2xl7vdfjvy3" path="res://sprite/New Piskel-35.png" id="13_jepcw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmmhi"]
 
@@ -396,7 +397,7 @@ offset_bottom = 22.0
 texture_filter = 1
 position = Vector2(94, 4)
 sprite_frames = SubResource("SpriteFrames_g156k")
-animation = &"off"
+animation = &"on"
 autoplay = "on"
 
 [node name="Lock 1" type="AnimatedSprite2D" parent="."]
@@ -516,6 +517,20 @@ theme_override_fonts/font = ExtResource("5_slta7")
 theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 script = ExtResource("6_h53da")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-17, -43)
+rotation = 0.58294
+scale = Vector2(1.72563, 1.72563)
+texture = ExtResource("13_jepcw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(38, -45)
+rotation = 0.58294
+scale = Vector2(1.61765, 1.61765)
+texture = ExtResource("13_jepcw")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Multiply 1" to="." method="_on_multiply_1_pressed"]

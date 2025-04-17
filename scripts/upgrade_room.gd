@@ -116,20 +116,22 @@ func _on_multiply_3_pressed() -> void:
 
 func _on_good_ads_pressed() -> void:
 	if GameManager.good_ads == false and GameManager.money >= 100000:
-		lock_3.play("unlock")
-		GameManager.good_ads = true
-		GameManager.money -= 100000
-		GameManager.update_money()
-		timer_3 = 1
+		pass
+		#lock_3.play("unlock")
+		#GameManager.good_ads = true
+		#GameManager.money -= 100000
+		#GameManager.update_money()
+		#timer_3 = 1
 
 
 func _on_stop_n_think_pressed() -> void:
 	if GameManager.stop_n_think == false and GameManager.money >= 100000:
-		lock_4.play("unlock")
-		GameManager.stop_n_think = true
-		GameManager.money -= 100000
-		GameManager.update_money()
-		timer_4 = 1
+		pass
+		#lock_4.play("unlock")
+		#GameManager.stop_n_think = true
+		#GameManager.money -= 100000
+		#GameManager.update_money()
+		#timer_4 = 1
 
 
 func _on_correct_colors_pressed() -> void:
@@ -146,22 +148,23 @@ func _on_toggle_ads_pressed() -> void:
 		GameManager.toggle_ads = true
 		click_timer = 1
 		clickable = false
-		print(on_off)
 		on_off.play("off")
 		lock_6.play("unlock")
 		GameManager.ads = false
 		GameManager.money -= 6
 		GameManager.update_money()
 		timer_6 = 1
-	if GameManager.ads == true and GameManager.toggle_ads == true:
-		print("behbvijvberhjkbnehjkberhjkgbehjkrbvv ")
-		click_timer = 1
-		clickable = false
-		on_off.play("off")
-		GameManager.ads = false
-	if GameManager.ads == false and GameManager.toggle_ads == true:
-		print("HBDUYSBHJVBSBCRWBGIUYGRBWFBGR")
-		click_timer = 1
-		clickable = false
-		on_off.play("on")
-		GameManager.ads = true
+		print("1745386452368452467865267845")
+	if GameManager.toggle_ads == true:
+		if GameManager.ads == true and clickable == true:
+			GameManager.ads = false
+			on_off.play("off")
+			click_timer = 1
+			clickable = false
+			print("oigbgjketbgjkengerg")
+		if GameManager.ads == false and clickable == true:
+			GameManager.ads = true
+			on_off.play("on")
+			click_timer = 1
+			clickable = false
+			print("BBVJBSHKVBJKHEWFBHJBV")

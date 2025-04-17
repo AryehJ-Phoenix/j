@@ -12,11 +12,10 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w7ko"]
 bg_color = Color(0.364143, 0.330656, 0.411017, 1)
 
-[node name="noob vs pro" type="Control" node_paths=PackedStringArray("Ad_Free")]
+[node name="noob vs pro" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_l7mgf")
-Ad_Free = NodePath("")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
