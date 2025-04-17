@@ -51,6 +51,7 @@ func _process(delta: float) -> void:
 	
 	timer -= delta
 	if score < 0:
+		score = 0
 		get_tree().change_scene_to_file("res://scenes/debt.tscn")
 	
 	if card != null:
