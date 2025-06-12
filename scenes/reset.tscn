@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://6feomgnhh70s"]
 
-[ext_resource type="Script" path="res://scripts/reset.gd" id="1_5ok2q"]
+[ext_resource type="Script" uid="uid://cto0gyxle5c8b" path="res://scripts/reset.gd" id="1_5ok2q"]
 [ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="2_wwqgu"]
 [ext_resource type="Texture2D" uid="uid://csfl1jwu7elal" path="res://sprite/New Piskel-25.png" id="3_n6l2j"]
 

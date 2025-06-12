@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bg7isu25bmtmh"]
 
-[ext_resource type="Script" path="res://scripts/noob_vs_pro.gd" id="1_l7mgf"]
+[ext_resource type="Script" uid="uid://bx8moifp6d1i6" path="res://scripts/noob_vs_pro.gd" id="1_l7mgf"]
 [ext_resource type="Texture2D" uid="uid://wp5ncebssa0r" path="res://sprite/noob.png" id="2_2tmis"]
 [ext_resource type="Texture2D" uid="uid://dh0y8q2q1kirc" path="res://sprite/pro.png" id="3_cvjp3"]
 [ext_resource type="Texture2D" uid="uid://d0w8t1muo8dgq" path="res://sprite/2025_03_20_0u4_Kleki.png" id="4_psoq6"]
-[ext_resource type="Script" path="res://scripts/money_label.gd" id="6_kfp38"]
+[ext_resource type="Script" uid="uid://bt2xsiciyixm4" path="res://scripts/money_label.gd" id="6_kfp38"]
 [ext_resource type="FontFile" uid="uid://r6hbtqvqy2bf" path="res://sprite/Minecraft.ttf" id="6_yxn71"]
 [ext_resource type="Texture2D" uid="uid://djmjvtc7cvc2d" path="res://sprite/Dressing Room.png" id="7_44iu7"]
 [ext_resource type="Texture2D" uid="uid://bbic3jorr1y8h" path="res://sprite/IMG_1004-2-4.png" id="9_8qjr2"]

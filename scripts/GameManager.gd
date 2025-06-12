@@ -1,6 +1,6 @@
 extends Node
 
-
+#GITHUB STOP BEING AN ASS
 var score_text = Label
 var score = 0
 var hit_timer = 2

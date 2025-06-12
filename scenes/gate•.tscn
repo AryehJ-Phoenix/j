@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://csi5lggyints1"]
 
-[ext_resource type="Script" path="res://scripts/gate•.gd" id="1_l36p6"]
+[ext_resource type="Script" uid="uid://1ad8w1htp86q" path="res://scripts/gate•.gd" id="1_l36p6"]
 [ext_resource type="Texture2D" uid="uid://r1deo2njkfmh" path="res://sprite/New Piskel-21.png" id="2_dsuvt"]
 [ext_resource type="Texture2D" uid="uid://ctrbfdtcrlfoc" path="res://sprite/New Piskel-21-2.png" id="2_essg8"]
 [ext_resource type="Texture2D" uid="uid://i1tv5f0sinx8" path="res://sprite/New Piskel-21-2-2.png" id="3_fcwlj"]

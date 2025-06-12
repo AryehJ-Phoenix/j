@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d211eayfhuolt"]
 
-[ext_resource type="Script" path="res://scripts/gate-.gd" id="1_7ogua"]
+[ext_resource type="Script" uid="uid://b5m4ow26w183f" path="res://scripts/gate-.gd" id="1_7ogua"]
 [ext_resource type="Texture2D" uid="uid://r1deo2njkfmh" path="res://sprite/New Piskel-21.png" id="2_ke1fg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k3oic"]

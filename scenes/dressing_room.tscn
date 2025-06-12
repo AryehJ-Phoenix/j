@@ -1,8 +1,8 @@
 [gd_scene load_steps=43 format=3 uid="uid://dyjw63khi7t04"]
 
-[ext_resource type="Script" path="res://scripts/dressing_room.gd" id="1_1tbep"]
+[ext_resource type="Script" uid="uid://byvdflo0dh7sf" path="res://scripts/dressing_room.gd" id="1_1tbep"]
 [ext_resource type="Texture2D" uid="uid://dmwoy3vte4sxc" path="res://sprite/New Piskel-27.png" id="2_032vc"]
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="2_svswr"]
+[ext_resource type="Script" uid="uid://b1j6uvv2loccx" path="res://scripts/GameManager.gd" id="2_svswr"]
 [ext_resource type="Texture2D" uid="uid://ddbdh5ng4yen1" path="res://sprite/Jas Walk Cycle-2-2.png" id="3_8dimy"]
 [ext_resource type="Texture2D" uid="uid://cvcgq0qb32xmr" path="res://sprite/Jas Walk Cycle-2-2-2-2.png" id="4_50smi"]
 [ext_resource type="Texture2D" uid="uid://dy5514yxv1w5s" path="res://sprite/New Piskel-30.png" id="4_em1eq"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://1is8l2dv3lht" path="res://sprite/New Piskel-31.png" id="9_2cl1x"]
 [ext_resource type="FontFile" uid="uid://r6hbtqvqy2bf" path="res://sprite/Minecraft.ttf" id="10_0l0ld"]
 [ext_resource type="Texture2D" uid="uid://cyc42ew2qjsj1" path="res://sprite/New Piskel-32.png" id="10_vn7qg"]
-[ext_resource type="Script" path="res://scripts/money_label.gd" id="11_4l3sg"]
+[ext_resource type="Script" uid="uid://bt2xsiciyixm4" path="res://scripts/money_label.gd" id="11_4l3sg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4yokq"]
 atlas = ExtResource("3_8dimy")

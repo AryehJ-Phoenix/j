@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://bwko7y2icywp7"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_v7odp"]
+[ext_resource type="Script" uid="uid://c2fum6ass00j2" path="res://scripts/player.gd" id="1_v7odp"]
 [ext_resource type="Texture2D" uid="uid://cdeg0xohvhkq8" path="res://sprite/Jas Walk Cycle-2.png" id="2_ow78a"]
 [ext_resource type="Texture2D" uid="uid://4ohlkgojophj" path="res://sprite/IMG_1004.png" id="2_x4862"]
 [ext_resource type="Texture2D" uid="uid://qe0picb7puxj" path="res://sprite/Jas Walk Cycle-2-2-3.png" id="3_qayls"]

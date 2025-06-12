@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://dtlashqmj3lq6"]
 
-[ext_resource type="Script" path="res://scripts/money_icon.gd" id="1_ha2r8"]
+[ext_resource type="Script" uid="uid://c0eyluc0adwn8" path="res://scripts/money_icon.gd" id="1_ha2r8"]
 [ext_resource type="Texture2D" uid="uid://m7rdv1r1fuq6" path="res://sprite/160x236 animated background-2.png" id="2_n4oxb"]
 [ext_resource type="Texture2D" uid="uid://bthiaxtgci1ku" path="res://sprite/$$$.png" id="2_ucy4j"]
 
